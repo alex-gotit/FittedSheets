@@ -9,7 +9,7 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
 
-open class SheetViewController: UIViewController {
+@objcMembers open class SheetViewController: UIViewController {
     // MARK: - Public Properties
     public private(set) var childViewController: UIViewController!
     
@@ -117,6 +117,10 @@ open class SheetViewController: UIViewController {
             self.setSizes(sizes, animated: false)
         }
         self.modalPresentationStyle = .overFullScreen
+    }
+
+    public convenience init(controller: UIViewController) {
+        self.init(controller: controller, sizes: [SheetSize.fixed(275.0)])
     }
     
     public override func viewDidLoad() {
