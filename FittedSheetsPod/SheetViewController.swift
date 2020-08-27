@@ -120,7 +120,7 @@ import UIKit
     }
 
     public convenience init(controller: UIViewController) {
-        self.init(controller: controller, sizes: [SheetSize.fixed(275.0)])
+        self.init(controller: controller, sizes: [])
     }
     
     public override func viewDidLoad() {
